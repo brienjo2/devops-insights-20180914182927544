@@ -31,7 +31,7 @@ exports.getWeather = function(req, res) {
     			var response = {city: body.name, weather: weath};
     			return res.status(200).send(response);
     		} else {
-                return res.status(400).send({msg:'Failed'});
+                return res.status(403).send({msg:'Failed'});
             }
     	}
     });
